@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>オーディオ・アドベンチャー | Audio Adventure</title>
+        <meta name="description" content="架空の音楽フェスティバルのWebサイトです。">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="./css/style.css">
+
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/f6df3f06d8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header class="header">
+            <a href="index.html" class="logo"><img src="./images/logo/logo.svg" alt="Audio Adventure"></a>
+            <!-- PCナビゲーション-->
+            <nav class="pc-nav pc-only">
+                <ul class="pc-nav-list">
+                    <li><a href="#line-up" class="uppercase">Line Up</a></li>
+                    <li><a href="#news" class="uppercase">News</a></li>
+                    <li><a href="#about" class="uppercase">About</a></li>
+                </ul>
+            </nav>
+            <a href="index.html" class="header-tickets-btn button1 uppercase">Tickets</a>
+            <div class="hamburger-btn button1"><span></span><span></span><span></span></div>
+            <!-- SPナビゲーション -->
+            <nav class="sp-nav">
+                <ul class="sp-nav-list">
+                    <li><a href="#line-up" class="uppercase">Line Up</a></li>
+                    <li><a href="#news" class="uppercase">News</a></li>
+                    <li><a href="#about" class="uppercase">About</a></li>
+                    <li><a href="index.html" class="uppercase nav-tickets-btn">Tickets</a></li>
+                </ul>
+                <ul class="sp-nav-sns">
+                    <li><a href="https://twitter.com"><i class="fab fa-twitter" aria-label="ツイッター"></i></a></li>
+                    <li><a href="https://www.instagram.com"><i class="fab fa-instagram" aria-label="インスタグラム"></i></a></li>
+                    <li><a href="https://www.youtube.com"><i class="fab fa-youtube" aria-label="ユーチューブ"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- メイン -->
+        <main class="main">
+            <section class="top-info fade-in">
+                <div class="hero-area">
+                    <div class="fes-info"><img src="./images/logo/fes_info_sp.svg" alt="2023年7月15日土曜日・16日日曜日、グリーンヒルサウンドガーデン"></div>
+                    <div class="main-visual">
+                        <div class="bird"><img src="./images/illustration/bird.svg" alt=""></div>
+                        <div class="palm-tree"><img src="./images/illustration/palm_tree.svg" alt=""></div>
+                        <div class="leaf-left"><img src="./images/illustration/leaf.svg" alt=""></div>
+                        <div class="leaf-right"><img src="./images/illustration/leaf.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="line-up" id="line-up">
+                    <h2 class="uppercase line-up-title">Line Up</h2>
+                    <p class="artist-name1">Axel Blackwood / Violet River / Luna Monroe / Phoenix Sterling /</p>
+                    <p class="artist-name2">Zara wild / The Blackout / Boulevard / Les Rêves Bleus / comorebi</p>
+                    <p class="and-more uppercase">And More...</p>
+                </div>
+                <a class="info-ticket-btn button1" href="index.html">チケット購入</a>
+            </section>
+            <section class="news  fadeInTrigger" id="news">
+                <h2 class="section-title uppercase">News</h2>
+                <ul class="news-list">
+                    <li class="news-item">
+                        <a href="index.html">
+                            <span class="mask"><img src="./images/photo/news_1.png" alt="Axel Blackwood"></span>
+                            <div class="news-inner">
+                                <span class="news-date">2023.02.12</span>
+                                <p class="news-title">Axel Blackwoodがヘッドライナーに決定！</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="news-item">
+                        <a href="index.html">
+                            <span class="mask"><img src="./images/photo/news_2.png" alt="過去のフェス画像"></span>
+                            <div class="news-inner">
+                                <span class="news-date">2023.02.01</span>
+                                <p class="news-title">第1弾出演アーティストのラインナップを公開！</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="news-item">
+                        <a href="index.html">
+                            <span class="mask"><img src="./images/photo/news_3.png" alt="オーディオ・アドベンチャーのロゴ"></span>
+                            <div class="news-inner">
+                                <span class="news-date">2023.01.20</span>
+                                <p class="news-title">早割チケット発売決定！2/4(土)正午から受付開始</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="news-item">
+                        <a href="index.html">
+                            <span class="mask"><img src="./images/photo/news_4.png" alt="過去のフェス画像"></span>
+                            <div class="news-inner">
+                                <span class="news-date">2023.01.10</span>
+                                <p class="news-title">今年もオーディオ・アドベンチャー開催決定！</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <a class="button2 uppercase" href="index.html">View All</a>
+            </section>
+            <section class="about  fadeInTrigger" id="about">
+                <h2 class="section-title uppercase">About</h2>
+                <div class="about-box">
+                    <div class="about-image"><img src="./images/photo/about.jpg" alt="観客"></div>
+                    <div class="about-description">
+                        <p>未知の世界で冒険をするように音楽を楽しんで欲しいという思いで20XX年に誕生した音楽の祭典オーディオ・アドベンチャー。古今東西のアーティストを毎年招待し、20XX年には動員数〇〇万人を記録。毎年恒例の豪華プレゼントが当たるスタンプラリーも人気。</p>
+                        <a class="button2 uppercase" href="index.html">View All</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- フッター -->
+        <footer class="footer  fadeInTrigger">
+            <ul class="footer-sns">
+                <li><a class="button1" href="https://twitter.com"><i class="fab fa-twitter" aria-label="ツイッター"></i></a></li>
+                <li><a class="button1" href="https://www.instagram.com"><i class="fab fa-instagram" aria-label="インスタグラム"></i></a></li>
+                <li><a class="button1" href="https://www.youtube.com"><i class="fab fa-youtube" aria-label="ユーチューブ"></i></a></li>
+            </ul>
+            <small class="copyright">©20XX-2023AUDIO ADVENTURE</small>
+        </footer>
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="./js/hamburger.js"></script>
+        <script src="./js/header.js"></script>
+        <script src="./js/fadeanime.js"></script>
+    </body>
+</html>
