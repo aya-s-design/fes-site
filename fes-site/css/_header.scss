@@ -1,0 +1,136 @@
+//
+// ヘッダーのスタイル
+//
+
+.header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    padding: 2rem;
+    width: 100%;
+    height: 9rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+    transition: 0.4s all;
+    background-color: transparent;
+}
+.header.background {
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    transition: 0.4s all;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.logo {
+    img {
+        height: 4rem;
+    }
+    margin-right: auto;
+    transition: all 0.3s ease;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+// SPナビゲーション
+.sp-nav {
+    position: absolute;
+    top: 0;
+    right: -120%;
+    opacity: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg,$light-blue, $green);
+    transition: all 0.4s;
+    box-sizing: border-box;
+    a {
+        color: $navy;
+    }
+    &.panelactive {
+        opacity: 1;
+        right: 0;
+    }
+}
+.sp-nav-list {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    -webkit-transform: translate(-50%, -40%);
+    -ms-transform: translate(-50%, -40%);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    li {
+        margin-bottom: 4rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    a {
+        display: inline-block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+    .nav-tickets-btn {
+        border: 4px solid $navy;
+        border-radius: 10px;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+}
+.sp-nav-sns {
+    position: absolute;
+    bottom: 4rem;
+    left: 0;
+    margin: 0;
+    padding: 0 6rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    a {
+        display: inline-block;
+        margin: 0;
+        font-size: 4rem;
+        width: 7rem;
+        height: 7rem;
+        border: 4px solid $navy;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 6.5rem;
+    }
+}
+
+//PCナビゲーション
+.pc-nav-list {
+    display: flex;
+    li a {
+        position: relative;
+        font-family: 'Open Sans', sans-serif;
+        color: $white;
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-right: 4rem;
+        padding-bottom: 0.8rem;
+        &::after {
+            content: "";
+            position: absolute;
+            background: linear-gradient(90deg, $light-blue, $green);
+            width: 0%;
+            height: 0.4rem;
+            border-radius: 2px;
+            left: 0;
+            bottom: 0;
+            transition: all 0.3s ease;
+        }
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}

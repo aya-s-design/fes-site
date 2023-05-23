@@ -1,0 +1,115 @@
+//
+// ニュースのスタイル
+//
+
+.news-list {
+    width: 100%;
+    padding: 0 2rem;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.news-item {
+    width: calc(50% - 1rem);
+    &:nth-child(1) {
+        margin-bottom: 2rem;
+    }
+    &:nth-child(2) {
+        margin-bottom: 2rem;
+    }
+    a {
+        display: block;
+        color: $white;
+        position: relative;
+        height: 100%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 10px;
+            border: 3px solid transparent;
+            background-image: linear-gradient(90deg, $light-blue, $green);
+            background-origin: border-box;
+            background-clip: border-box;
+            -webkit-mask: linear-gradient($white 0 0) padding-box, linear-gradient($white 0 0) border-box;
+            -webkit-mask-composite: destination-out;
+            mask: linear-gradient($white 0 0) padding-box, linear-gradient($white 0 0) border-box;
+            mask-composite: exclude;
+            z-index: 2;
+        }
+    }
+}
+
+.news-inner {
+    padding: 0.8rem 1.5rem 1.5rem;
+    box-sizing: border-box;
+    border-top: 3px solid $light-blue;
+    border-image: linear-gradient(90deg, $light-blue, $green);
+    border-image-slice: 1;
+    .news-date {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1;
+    }
+    .news-title {
+        margin: 0;
+        font-size: 1.4rem;
+        text-align: justify;
+    }
+}
+
+// PC表示
+@media (min-width:769px) {
+    .news-list {
+        width: 80%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .news-item {
+        width: calc(25% - 2rem);
+        &:nth-child(1) {
+            margin-bottom: 0;
+        }
+        &:nth-child(2) {
+            margin-bottom: 0;
+        }
+        img {
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        a:hover img {
+            transform: scale(1.2);
+            z-index: -1;
+        }
+        .mask {
+            display: block;
+            line-height: 0;
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+        }
+        a:hover {
+            .news-inner {
+                color: $navy;
+                background: linear-gradient(90deg, $light-blue, $green);
+            }
+        }
+    }
+    .news-inner {
+        padding: 1rem 2rem 2rem;
+        transition: all 0.3s ease;
+        border-radius: 0 0 10px 10px;
+        .news-date {
+            font-size: 1.4rem;
+        }
+        .news-title {
+            font-size: 1.6rem;
+        }
+    }
+}

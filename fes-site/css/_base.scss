@@ -1,0 +1,46 @@
+//
+// ベースのスタイル
+//
+
+// 変数
+$white: #fff;
+$navy: #393e4a;
+$light-blue: #7fc0d8;
+$green: #9fd7ba;
+
+// ベーススタイル
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+    color: $white;
+    background-color: $navy;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+li {
+    list-style: none;
+}
+
+.pc-only {
+    @media (max-width:768px) {
+        display: none;
+    }
+}
